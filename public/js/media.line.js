@@ -1,0 +1,1 @@
+new media_line_me.LineButton({"pc":false,"lang":"en","type":"d"});

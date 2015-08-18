@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Uniqlo Digital Chirashi</title>
+	<!-- add some design responsiveness -->
+
+	<meta name="viewport" 			content="width=device-width, initial-scale=1">
+	<meta property="fb:app_id"	    content="<?php echo $app_id;?>" />
+	<!-- dynamic meta tags -->
+	<meta property="og:url" 		content="<?php echo str_replace("%20","%2520",$url);?>" />
+	<meta property="og:type" 		content="website" /> 
+	<meta property="og:title" 		content="<?php echo $title;?>" />
+	<meta property="og:description" content="<?php echo $description;?>" />
+	<meta property="og:image" 		content="<?php echo $image;?>" />
+	<!-- for line (resolution handler for line) -->
+	<meta property="og:image" 		content="<?php echo $image;?>">
+	<meta property="og:image:width" content="275" />
+	<meta property="og:image:height"content="275" />
+	<meta property="og:site_name" 	content="<?php echo $site_name;?>">
+	<!-- twitter specific meta tags -->
+
+	<meta name="twitter:card"	    content="summary_large_image">
+	<meta name="twitter:site"	    content="@UNIQLO_JP">
+	<meta name="twitter:creator" 	content="@UNIQLO_JP">
+	<meta name="twitter:title" 		content="<?php echo $title;?>">
+	<meta name="twitter:description"content="<?php echo $description;?>">
+	<meta name="twitter:image" 		content="<?php echo $image;?>">
+	<!-- end meta -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+	</script>
+	<!-- facebook sdk script -->
+	<script src="bower_components/fb-sdk/fb-sdk.js"></script>
+	<!-- line scripts -->
+	<script src="//media.line.me/js/line-button.js?v=20140411">
+	</script>
+	<script src="js/media.line.js"></script>
+	<script src="js/twitter.js"></script>
+	<link rel="stylesheet" href="layout.css">
+</head>
+<body>
+		<div id="fb-root"></div>
+		<!--scripts-->
+		<div id="super-div">
+				<!-- facebook script -->		
+				<div 	class="fb-share-button" 
+		        		data-href="<?php echo $url?>" 
+		        		data-layout="button">
+		    	</div>
+		    	<!-- experimental fb script -->
+		    	<!-- <div>
+		    		<img src = "fb.png" class="sharer" height="30px" width="30px">
+		    	</div> -->
+		    	<!-- line script -->
+		    	<div>
+				<a href="http://line.me/R/msg/text/?
+				<?php echo $title." "."--- ". str_replace("%20","%2520",$url)." Uniqlo Mobile URL";?>">
+				<img src="linebutton_en/linebutton1.png" width="56" height="20" alt="LINE it!" /></a> 
+				<!-- 	<p>image testers</p> <img src="<?php echo $image;?>"> -->
+				</div>
+				<!-- twitter script -->
+				<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+
+		</div>
+		<!-- dom passer -->
+		<div id="dom-target" style="display:none"><?php echo $url; ?>
+		</div>
+		<!-- end-->
+		
+	<script src="bower_components/fb-sdk/fb-share-jquery.js"></script>	
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+.fb-share-button
+{
+/*transform: scale(2.2);
+-ms-transform: scale(2.2);
+-webkit-transform: scale(2.2);
+-o-transform: scale(2.2);
+-moz-transform: scale(2.2);
+transform-origin: top left;
+-ms-transform-origin: top left;
+-webkit-transform-origin: top left;
+-moz-transform-origin: top left;
+-webkit-transform-origin: top left;*/
+
+margin-bottom: 0.25em;
+background-image: ('fb.png');
+background-size: 15px 15px; 
+}
